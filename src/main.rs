@@ -1,14 +1,15 @@
 mod rustboy;
-use rustboy::CPU_Registers;
+use rustboy::CPU;
 
 fn main(){
-    let mut cpu:CPU_Registers = CPU_Registers::new();
+    let mut cpu:CPU = CPU::new();
     
 
-    cpu.set_joint_register("B", "C", 515);
-   
-   cpu.set_flag("Z", true);
-   cpu.set_flag("HC", true);
-   println!("{:#08b}", cpu.get_flag(""));
+
+    cpu.add(0);
+    
+//    cpu.registers.set_flag("S", true);
+//    cpu.registers.set_flag("HC", true);
+//    println!("{:08b}", cpu.registers["F"]);
 
 }
